@@ -1,0 +1,58 @@
+name: Publicar no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Obter o projeto
+        uses: actions/checkout@v6
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.15.0'
+          cache: npm
+      - name: Obter o endereço do GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Instalar dependências
+        run: npm ci
+      - name: Gerar páginas, imagens e sitemap
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          npx ng build --base-href "${PAGES_BASE_PATH}/"
+          node scripts/seo.mjs
+      - name: Preparar arquivos para publicação
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist/andre/browser
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publicar o site
+        id: deployment
+        uses: actions/deploy-pages@v4

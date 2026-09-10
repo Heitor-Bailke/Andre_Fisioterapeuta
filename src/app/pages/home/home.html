@@ -1,0 +1,417 @@
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow hero-eyebrow">
+        <span class="status-dot"></span> CUIDADO QUE VAI ATÉ VOCÊ
+      </div>
+      <h1 id="hero-title">
+        Movimento, cuidado<br class="desktop-break" /><em
+          >e qualidade de vida.</em
+        ><span>No conforto da sua casa.</span>
+      </h1>
+      <p class="hero-description">
+        Fisioterapia e Pilates com um olhar para você.<br
+          class="desktop-break"
+        />
+        Atendimento individualizado, respeitando seu ritmo,<br
+          class="desktop-break"
+        />
+        suas necessidades e sua história.
+      </p>
+      <div class="hero-actions">
+        <app-contact-button /><a class="secondary-link" href="#servicos"
+          >Conhecer os serviços <app-icon name="arrow"
+        /></a>
+      </div>
+      <div class="hero-assurance">
+        <span><app-icon name="shield" /> CREFITO 421269-F</span><i></i
+        ><span><app-icon name="home" /> Atendimento domiciliar</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-outline" aria-hidden="true"></div>
+      <div class="hero-photo">
+        <img
+          src="media/andre-hero.webp"
+          width="720"
+          height="900"
+          alt="André Nunes Ladislau, fisioterapeuta, sorrindo e usando jaleco"
+          fetchpriority="high"
+        />
+        <div class="photo-caption">
+          <span>André Nunes Ladislau</span
+          ><small>FISIOTERAPEUTA · CREFITO 421269-F</small>
+        </div>
+      </div>
+      <div class="care-badge">
+        <span class="badge-icon"><app-icon name="heart" /></span>
+        <div>Cuidado de perto.<small>Feito para você.</small></div>
+      </div>
+      <div class="hero-side-note" aria-hidden="true">MOVIMENTO É VIDA</div>
+      <span class="hero-spark" aria-hidden="true">✳</span>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="container">
+      <span>Um cuidado que respeita quem você é.</span
+      ><a href="#sobre">Conheça o André <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="values-strip">
+  <div class="container">
+    <span><app-icon name="person" /> Atendimento individualizado</span
+    ><span><app-icon name="home" /> Conforto do seu lar</span
+    ><span><app-icon name="spark" /> Fisioterapia e Pilates</span
+    ><span><app-icon name="heart" /> Para diferentes fases da vida</span>
+  </div>
+</div>
+
+<section class="section about" id="sobre" aria-labelledby="about-title">
+  <div class="container about-grid" appReveal>
+    <div class="about-visual">
+      <img
+        src="media/andre-atendimento.webp"
+        width="591"
+        height="760"
+        alt="André durante um atendimento fisioterapêutico"
+        loading="lazy"
+      />
+      <div class="about-note">
+        <span class="little-line"></span>
+        <p>Por trás de cada movimento,<br />uma pessoa. Uma história.</p>
+      </div>
+      <span class="image-label">UM OLHAR ATENTO PARA CADA PESSOA</span>
+    </div>
+    <div class="about-copy">
+      <span class="eyebrow">PRAZER, SOU O ANDRÉ</span>
+      <h2 id="about-title">
+        Cuidar de pessoas.<br /><em>Valorizar cada movimento.</em>
+      </h2>
+      <p>
+        Sou André Nunes Ladislau, fisioterapeuta registrado no CREFITO sob o
+        número <strong>421269-F</strong>. Meu trabalho é voltado ao cuidado
+        individualizado e à promoção da qualidade de vida.
+      </p>
+      <p>
+        Com formação complementar em Pilates, planejo cada atendimento
+        respeitando suas necessidades, limitações e objetivos.
+      </p>
+      <p>
+        Acredito em um acompanhamento próximo e acolhedor. Por isso, levo a
+        fisioterapia até a sua casa, para que você receba cuidado em um ambiente
+        familiar e confortável.
+      </p>
+      <div class="credentials">
+        <span><app-icon name="shield" /> Fisioterapeuta registrado</span
+        ><span><app-icon name="spark" /> Formação em Pilates</span>
+      </div>
+      <app-contact-button label="Falar com André" variant="text" />
+    </div>
+  </div>
+</section>
+
+<section
+  class="section services"
+  id="servicos"
+  aria-labelledby="services-title"
+>
+  <div class="container" appReveal>
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">COMO POSSO AJUDAR</span>
+        <h2 id="services-title">
+          Cuidado pensado<br /><em>para a sua vida.</em>
+        </h2>
+      </div>
+      <p>
+        Diferentes formas de cuidar, com o mesmo propósito:<br
+          class="desktop-break"
+        />
+        colocar você e suas necessidades em primeiro lugar.
+      </p>
+    </div>
+    <div class="service-grid">
+      @for (service of services; track service.title; let i = $index) {
+      <article class="service-card">
+        <div class="service-top">
+          <span class="icon-box"><app-icon [name]="service.icon" /></span
+          ><span class="card-number">0{{ i + 1 }}</span>
+        </div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+        <app-contact-button
+          label="Quero saber mais"
+          variant="text"
+          [subject]="service.subject"
+        />
+      </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section audience" aria-labelledby="audience-title">
+  <div class="container" appReveal>
+    <div class="center-heading">
+      <span class="eyebrow">EM CADA FASE, UM CUIDADO</span>
+      <h2 id="audience-title">
+        O movimento faz parte<br /><em>de todas as idades.</em>
+      </h2>
+      <p>
+        Um atendimento que respeita as particularidades de cada momento da vida.
+      </p>
+    </div>
+    <div class="audience-grid">
+      @for (audience of audiences; track audience.title) {
+      <article>
+        <span class="audience-number">{{ audience.number }}</span>
+        <div>
+          <h3>{{ audience.title }}</h3>
+          <p>{{ audience.description }}</p>
+        </div>
+      </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="home-care" id="atendimento" aria-labelledby="home-care-title">
+  <div class="container home-care-grid" appReveal>
+    <div class="home-care-copy">
+      <span class="eyebrow">ATENDIMENTO DOMICILIAR</span>
+      <h2 id="home-care-title">
+        Fisioterapia onde<br />você se sente<br /><em>mais confortável.</em>
+      </h2>
+      <p>
+        O cuidado vai até você. Mais praticidade para quem tem uma rotina
+        corrida, prefere ser atendido em casa ou quer evitar deslocamentos.
+      </p>
+      <ul class="check-list">
+        <li>
+          <app-icon name="check" /> Atendimento individual, no seu ambiente
+        </li>
+        <li>
+          <app-icon name="check" /> Mais conforto e economia de deslocamento
+        </li>
+        <li>
+          <app-icon name="check" /> Horários combinados diretamente com André
+        </li>
+      </ul>
+      <app-contact-button
+        label="Agendar atendimento domiciliar"
+        variant="light"
+      /><small class="region-note"
+        >Consulte as regiões atendidas pelo WhatsApp.</small
+      >
+    </div>
+    <div class="home-care-art">
+      <div class="arch-art">
+        <app-icon name="home" /><span
+          >O seu espaço.<br />O seu ritmo.<br /><em>O seu cuidado.</em></span
+        >
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+      </div>
+      <div class="home-care-seal">
+        <app-icon name="heart" /><span
+          >Mais proximidade.<br />Mais acolhimento.</span
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pilates" id="pilates" aria-labelledby="pilates-title">
+  <div class="container pilates-grid" appReveal>
+    <div
+      class="pilates-art"
+      role="img"
+      aria-label="Ilustração de uma pessoa realizando um exercício de mobilidade sobre um tapete"
+    >
+      <span class="eyebrow">CORPO, MOVIMENTO E EQUILÍBRIO</span
+      ><svg viewBox="0 0 520 400" fill="none" aria-hidden="true">
+        <circle cx="268" cy="195" r="151" fill="#e7e8df" />
+        <circle cx="268" cy="195" r="117" stroke="#c4cbc0" />
+        <path d="M63 326h396l-24 16H83Z" fill="#3e5969" />
+        <path
+          d="M128 307c25-25 61-39 102-60l57-85c10-16 22-15 35-7l44 30 53-63"
+          stroke="#3e5969"
+          stroke-width="19"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m231 247 68 2 50 58M285 166l-27 64-46 78"
+          stroke="#a98849"
+          stroke-width="17"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <circle cx="307" cy="122" r="21" stroke="#3e5969" stroke-width="8" />
+        <path
+          d="M101 362h319M408 85v26m-13-13h26"
+          stroke="#a98849"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <div class="pilates-art-caption">
+        <span>Respire. Mova-se. Reconecte-se.</span
+        ><span aria-hidden="true">↗</span>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow">PILATES</span>
+      <h2 id="pilates-title">
+        Mais consciência.<br />Mais equilíbrio.<br /><em>Mais você.</em>
+      </h2>
+      <p>
+        André também possui formação em Pilates e utiliza seus conhecimentos
+        para trabalhar movimento, consciência corporal, mobilidade e
+        fortalecimento de forma individualizada.
+      </p>
+      <p>
+        Exercícios orientados com acompanhamento profissional, respeitando seu
+        corpo e o seu ritmo.
+      </p>
+      <div class="pill-list">
+        <span>Mobilidade</span><span>Fortalecimento</span
+        ><span>Controle corporal</span><span>Equilíbrio</span>
+      </div>
+      <app-contact-button
+        label="Quero conhecer o atendimento"
+        subject="pilates"
+        variant="text"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section how-it-works" aria-labelledby="steps-title">
+  <div class="container" appReveal>
+    <div class="center-heading">
+      <span class="eyebrow">SIMPLES, DO PRIMEIRO CONTATO AO CUIDADO</span>
+      <h2 id="steps-title">
+        Seu primeiro passo<br /><em>começa com uma conversa.</em>
+      </h2>
+    </div>
+    <div class="steps-grid">
+      @for (step of steps; track step.title; let i = $index) {
+      <article>
+        <span class="step-number">0{{ i + 1 }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </article>
+      }
+    </div>
+    <div class="center-action">
+      <app-contact-button label="Solicitar atendimento" />
+    </div>
+  </div>
+</section>
+
+<section class="section benefits" aria-labelledby="benefits-title">
+  <div class="container" appReveal>
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">CUIDADO QUE FAZ SENTIDO</span>
+        <h2 id="benefits-title">
+          Pequenos detalhes.<br /><em>Um cuidado completo.</em>
+        </h2>
+      </div>
+      <p>
+        Do primeiro contato ao acompanhamento,<br class="desktop-break" />
+        sua experiência também importa.
+      </p>
+    </div>
+    <div class="benefits-grid">
+      @for (benefit of benefits; track benefit.title) {
+      <article>
+        <app-icon [name]="benefit.icon" />
+        <h3>{{ benefit.title }}</h3>
+        <p>{{ benefit.description }}</p>
+      </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section testimonials" aria-labelledby="testimonials-title">
+  <div class="container" appReveal>
+    <div class="center-heading">
+      <span class="eyebrow">HISTÓRIAS DE CUIDADO</span>
+      <h2 id="testimonials-title">
+        Cada pessoa tem<br /><em>uma história para contar.</em>
+      </h2>
+    </div>
+    <div class="testimonial-grid">
+      @for (testimonial of testimonials; track testimonial.firstName) {
+      <figure class="testimonial-card">
+        <blockquote>{{ testimonial.text }}</blockquote>
+        <figcaption>
+          @if (testimonial.photo) {<img
+            [src]="testimonial.photo"
+            width="48"
+            height="48"
+            loading="lazy"
+            alt=""
+          />}{{ testimonial.firstName }}@if (testimonial.rating !== undefined)
+          {<span [attr.aria-label]="testimonial.rating + ' de 5 estrelas'"
+            >{{ testimonial.rating }}/5</span
+          >}
+        </figcaption>
+      </figure>
+      } @empty {
+      <div class="testimonial-placeholder">
+        <span class="quote-mark" aria-hidden="true">“</span>
+        <p>Espaço reservado para<br />depoimento de paciente.</p>
+        <span class="placeholder-label">DEPOIMENTOS EM BREVE</span>
+      </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="container faq-grid" appReveal>
+    <div>
+      <span class="eyebrow">VAMOS TIRAR SUAS DÚVIDAS?</span>
+      <h2 id="faq-title">Antes de começar,<br /><em>uma boa conversa.</em></h2>
+      <p>
+        Reuni algumas respostas para ajudar você a conhecer melhor o
+        atendimento.
+      </p>
+      <span class="faq-contact-label">Ficou com outra dúvida?</span
+      ><app-contact-button label="Falar com André" variant="text" />
+    </div>
+    <div class="faq-list">
+      @for (faq of faqs; track faq.question) {
+      <details name="faq">
+        <summary>{{ faq.question }}<app-icon name="plus" /></summary>
+        <p>{{ faq.answer }}</p>
+      </details>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="contato" aria-labelledby="contact-title">
+  <div class="container" appReveal>
+    <span class="eyebrow">VAMOS DAR O PRÓXIMO PASSO?</span>
+    <h2 id="contact-title">
+      Cuide do seu movimento.<br /><em>Cuide da sua qualidade de vida.</em>
+    </h2>
+    <p>
+      Entre em contato e converse diretamente com André.<br />Um cuidado mais
+      próximo de você começa aqui.
+    </p>
+    <app-contact-button label="Agendar pelo WhatsApp" variant="light" /><span
+      class="final-credential"
+      >André Nunes Ladislau · Fisioterapeuta · CREFITO 421269-F</span
+    >
+  </div>
+  <div class="cta-ring ring-one" aria-hidden="true"></div>
+  <div class="cta-ring ring-two" aria-hidden="true"></div>
+</section>
