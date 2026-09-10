@@ -1,4 +1,5 @@
-import { Component } from "@angular/core";
+import { afterNextRender, Component, inject } from "@angular/core";
+import { DOCUMENT, ViewportScroller } from "@angular/common";
 import { RouterOutlet } from "@angular/router";
 import { HeaderComponent } from "./components/header";
 import { FooterComponent } from "./components/footer";
@@ -22,4 +23,23 @@ import { whatsappUrl } from "./core/site.config";
 })
 export class AppComponent {
   contactUrl = whatsappUrl();
+  constructor() {
+    const document = inject(DOCUMENT);
+    const scroller = inject(ViewportScroller);
+    afterNextRender(() => {
+      const hash = document.location.hash;
+      if (!hash) return;
+      // Hydration skips the router's initial scroll; align deep links after fonts settle.
+      void document.fonts.ready.then(() => {
+        if (document.location.hash !== hash) return;
+        try {
+          scroller.scrollToAnchor(decodeURIComponent(hash.slice(1)), {
+            behavior: "instant",
+          });
+        } catch {
+          // Ignore malformed URL fragments.
+        }
+      });
+    });
+  }
 }
