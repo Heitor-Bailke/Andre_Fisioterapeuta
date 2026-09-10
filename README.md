@@ -1,6 +1,10 @@
 # André Nunes Ladislau — Fisioterapia e Pilates
 
-Landing page em Angular, TypeScript e CSS, com páginas pré-renderizadas em HTML estático. Sem backend, cadastro ou banco de dados.
+Criei este site para ajudar meu amigo André Nunes Ladislau, fisioterapeuta, que estava precisando de uma página para apresentar seu trabalho e facilitar o contato com quem procura atendimento.
+
+A ideia foi transformar essa necessidade em um site acolhedor, profissional e fácil de usar, principalmente pelo celular. A página apresenta André, seus serviços de fisioterapia domiciliar e Pilates, e permite conversar diretamente com ele pelo WhatsApp.
+
+O projeto foi desenvolvido em Angular, TypeScript e CSS, com páginas pré-renderizadas em HTML estático e publicação no GitHub Pages. Sem backend, cadastro ou banco de dados.
 
 ## Executar
 
