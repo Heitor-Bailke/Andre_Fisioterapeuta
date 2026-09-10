@@ -329,11 +329,11 @@
 }
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
 }
 .service-card {
-  padding: 27px 25px 20px;
+  padding: 24px 20px 18px;
   border: 1px solid #dfe3dc;
   border-radius: 9px;
   background: var(--cream);
@@ -344,6 +344,7 @@
     border-color 0.25s,
     box-shadow 0.25s;
 }
+
 .service-card:hover {
   transform: translateY(-6px);
   border-color: #c6b790;
@@ -353,7 +354,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 27px;
+  margin-bottom: 20px;
 }
 .icon-box {
   display: flex;
@@ -377,8 +378,8 @@
 }
 .service-card p {
   font-size: var(--text-body);
-  line-height: 1.85;
-  margin-bottom: 25px;
+  line-height: 1.7;
+  margin-bottom: 20px;
 }
 .service-card app-contact-button {
   display: block;
@@ -1299,5 +1300,15 @@
   }
   .final-cta p {
     font-size: var(--text-body);
+  }
+}
+
+@media (max-width: 360px) {
+  .steps-grid,
+  .benefits-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .steps-grid article::after {
+    display: none;
   }
 }
