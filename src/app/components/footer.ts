@@ -8,7 +8,8 @@ import { RouterLink } from "@angular/router";
       <a class="brand" routerLink="/" fragment="inicio"
         ><img src="media/andre-logo.webp" width="56" height="56" alt="" /><span
           >André Nunes Ladislau<small
-            >FISIOTERAPEUTA · CREFITO 421269-F</small
+            >FISIOTERAPEUTA
+            <span class="brand-registration">CREFITO 421269-F</span></small
           ></span
         ></a
       >
@@ -25,6 +26,7 @@ import { RouterLink } from "@angular/router";
         >© {{ year }} André Nunes Ladislau. Todos os direitos reservados.</span
       ><a routerLink="/privacidade">Política de Privacidade</a>
     </div>
+    <p class="container footer-credit">Desenvolvido por Heitor Bailke de Bem</p>
   </footer>`,
 })
 export class FooterComponent {

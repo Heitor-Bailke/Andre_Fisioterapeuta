@@ -17,7 +17,8 @@ import { IconComponent } from "../shared/icon";
         <img src="media/andre-logo.webp" width="52" height="52" alt="" />
         <span
           >André Nunes Ladislau<small
-            >FISIOTERAPEUTA · CREFITO 421269-F</small
+            >FISIOTERAPEUTA
+            <span class="brand-registration">CREFITO 421269-F</span></small
           ></span
         >
       </a>

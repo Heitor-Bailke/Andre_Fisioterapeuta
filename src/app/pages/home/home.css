@@ -18,7 +18,7 @@
   align-items: center;
   gap: 9px;
   letter-spacing: 1.6px;
-  font-size: 9px;
+  font-size: var(--text-small);
   background: #f0eee6;
   padding: 7px 12px;
   border: 1px solid #e5e1d5;
@@ -46,26 +46,28 @@
   margin-top: 17px;
 }
 .hero-description {
-  font-size: 14px;
+  font-size: var(--text-body);
   line-height: 1.85;
   margin-top: 25px;
 }
 .hero-actions {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 24px;
   margin-top: 30px;
 }
 .hero-actions .secondary-link {
-  font-size: 11px;
+  font-size: var(--text-ui);
   gap: 8px;
   white-space: nowrap;
 }
 .hero-assurance {
+  flex-wrap: wrap;
   display: flex;
   align-items: center;
   gap: 17px;
-  font-size: 9px;
+  font-size: var(--text-small);
   color: var(--muted);
   margin-top: 30px;
 }
@@ -123,7 +125,7 @@
   display: block;
 }
 .photo-caption > small {
-  font-size: 8px;
+  font-size: var(--text-small);
   letter-spacing: 1.8px;
   color: #e0e6e8;
 }
@@ -162,12 +164,12 @@
   height: 19px;
 }
 .care-badge > div {
-  font-size: 12px;
+  font-size: var(--text-ui);
   line-height: 1.5;
   font-weight: 500;
 }
 .care-badge small {
-  font-size: 10px;
+  font-size: var(--text-small);
   display: block;
   color: var(--muted);
   font-weight: 400;
@@ -177,7 +179,7 @@
   right: -27px;
   top: 47%;
   writing-mode: vertical-rl;
-  font-size: 8px;
+  font-size: var(--text-small);
   letter-spacing: 3.3px;
   color: var(--gold);
 }
@@ -197,7 +199,7 @@
   justify-content: space-between;
   align-items: center;
   padding-block: 16px;
-  font-size: 10px;
+  font-size: var(--text-small);
   color: var(--muted);
 }
 .hero-bottom a {
@@ -223,7 +225,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 11px;
+  font-size: var(--text-ui);
 }
 .values-strip app-icon {
   color: var(--gold-light);
@@ -276,7 +278,7 @@
   bottom: 65px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 7px;
+  font-size: var(--text-small);
   letter-spacing: 2px;
   color: var(--gold);
 }
@@ -284,7 +286,7 @@
   margin-bottom: 27px;
 }
 .about-copy > p {
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.9;
 }
 .about-copy strong {
@@ -292,12 +294,13 @@
   color: var(--ink);
 }
 .credentials {
+  flex-wrap: wrap;
   display: flex;
   gap: 21px;
   margin: 24px 0 12px;
   padding-block: 18px;
   border-block: 1px solid var(--line);
-  font-size: 10px;
+  font-size: var(--text-small);
 }
 .credentials > span {
   display: flex;
@@ -320,13 +323,13 @@
   margin-bottom: 42px;
 }
 .section-heading > p {
-  font-size: 13px;
+  font-size: var(--text-body);
   max-width: 420px;
   padding-bottom: 6px;
 }
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 .service-card {
@@ -364,7 +367,7 @@
 }
 .card-number {
   color: #687367;
-  font-size: 10px;
+  font-size: var(--text-small);
   letter-spacing: 1px;
 }
 .service-card h3 {
@@ -373,7 +376,7 @@
   margin-bottom: 14px;
 }
 .service-card p {
-  font-size: 12px;
+  font-size: var(--text-body);
   line-height: 1.85;
   margin-bottom: 25px;
 }
@@ -389,7 +392,7 @@
 }
 .center-heading > p {
   margin-top: 22px;
-  font-size: 13px;
+  font-size: var(--text-body);
 }
 .audience-grid {
   display: grid;
@@ -412,7 +415,7 @@
   margin-bottom: 12px;
 }
 .audience-grid p {
-  font-size: 13px;
+  font-size: var(--text-body);
 }
 .home-care {
   background: var(--blue);
@@ -438,7 +441,7 @@
 .home-care-copy > p {
   color: #d8e0e3;
   max-width: 420px;
-  font-size: 13px;
+  font-size: var(--text-body);
   margin-top: 26px;
 }
 .check-list {
@@ -452,7 +455,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: var(--text-ui);
 }
 .check-list app-icon {
   width: 17px;
@@ -462,7 +465,7 @@
 .region-note {
   display: block;
   color: #c7d1d5;
-  font-size: 10px;
+  font-size: var(--text-small);
   margin-top: 14px;
 }
 .home-care-art {
@@ -524,7 +527,7 @@
   border-radius: 7px;
   padding: 17px 24px;
   color: var(--blue);
-  font-size: 12px;
+  font-size: var(--text-ui);
   line-height: 1.6;
 }
 .home-care-seal app-icon {
@@ -543,7 +546,7 @@
   padding: 33px 30px 25px;
 }
 .pilates-art > .eyebrow {
-  font-size: 8px;
+  font-size: var(--text-small);
   letter-spacing: 1.7px;
   margin-bottom: 10px;
 }
@@ -558,7 +561,7 @@
   justify-content: space-between;
   border-top: 1px solid #d9d9cc;
   padding-top: 18px;
-  font-size: 11px;
+  font-size: var(--text-ui);
 }
 .pilates-art-caption > span:last-child {
   font-size: 22px;
@@ -568,7 +571,7 @@
   margin-bottom: 24px;
 }
 .pilates-grid p {
-  font-size: 13px;
+  font-size: var(--text-body);
   line-height: 1.9;
 }
 .pill-list {
@@ -581,7 +584,7 @@
   padding: 5px 12px;
   border: 1px solid #d9ddd5;
   border-radius: 30px;
-  font-size: 10px;
+  font-size: var(--text-small);
 }
 .how-it-works {
   background: var(--sand);
@@ -619,11 +622,11 @@
   border-top: 1px dashed #c9c7bb;
 }
 .steps-grid h3 {
-  font-size: 18px;
+  font-size: 1.25rem;
   margin-bottom: 13px;
 }
 .steps-grid p {
-  font-size: 12px;
+  font-size: var(--text-body);
 }
 .center-action {
   text-align: center;
@@ -645,11 +648,11 @@
   margin-bottom: 18px;
 }
 .benefits-grid h3 {
-  font-size: 17px;
+  font-size: 1.25rem;
   margin-bottom: 12px;
 }
 .benefits-grid p {
-  font-size: 12px;
+  font-size: var(--text-body);
 }
 .testimonials {
   padding-block: 70px;
@@ -690,7 +693,7 @@
   color: var(--blue);
 }
 .placeholder-label {
-  font-size: 8px;
+  font-size: var(--text-small);
   letter-spacing: 1.7px;
   color: var(--muted);
   display: block;
@@ -722,13 +725,13 @@
   font-size: 46px;
 }
 .faq-grid > div > p {
-  font-size: 13px;
+  font-size: var(--text-body);
   max-width: 320px;
   margin-top: 24px;
 }
 .faq-contact-label {
   display: block;
-  font-size: 12px;
+  font-size: var(--text-ui);
   margin-top: 28px;
 }
 .faq-list {
@@ -744,7 +747,7 @@
   align-items: center;
   gap: 24px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: var(--text-body);
   font-weight: 500;
   min-height: 70px;
   padding: 19px 0;
@@ -762,7 +765,7 @@
   transform: rotate(45deg);
 }
 .faq-list details > p {
-  font-size: 12px;
+  font-size: var(--text-body);
   line-height: 1.9;
   margin: 0;
   padding: 0 30px 24px 0;
@@ -787,13 +790,13 @@
 }
 .final-cta p {
   color: #d6dfe2;
-  font-size: 13px;
+  font-size: var(--text-body);
   margin: 25px 0 29px;
 }
 .final-credential {
   display: block;
   color: #c7d1d5;
-  font-size: 9px;
+  font-size: var(--text-small);
   margin-top: 23px;
 }
 .cta-ring {
@@ -850,7 +853,7 @@
     gap: 13px;
   }
   .service-card h3 {
-    font-size: 18px;
+    font-size: 1.25rem;
   }
   .home-care-grid {
     gap: 60px;
@@ -869,7 +872,7 @@
   }
   .credentials {
     gap: 15px;
-    font-size: 9px;
+    font-size: var(--text-small);
   }
 }
 @media (max-width: 960px) {
@@ -900,10 +903,10 @@
     bottom: 100px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: var(--text-body);
   }
   .values-strip span {
-    font-size: 9px;
+    font-size: var(--text-small);
     gap: 7px;
   }
   .about-grid {
@@ -949,13 +952,13 @@
     font-size: 40px;
   }
   .home-care .button {
-    font-size: 11px;
+    font-size: var(--text-ui);
   }
   .steps-grid {
     gap: 22px;
   }
   .steps-grid h3 {
-    font-size: 16px;
+    font-size: 1.25rem;
   }
   .benefits-grid {
     gap: 24px;
@@ -981,7 +984,7 @@
     white-space: normal;
   }
   .hero-description {
-    font-size: 14px;
+    font-size: var(--text-body);
     max-width: 390px;
   }
   .hero-visual {
@@ -1007,7 +1010,7 @@
     right: -16px;
   }
   .hero-bottom > .container {
-    font-size: 9px;
+    font-size: var(--text-small);
   }
   .values-strip > .container {
     display: grid;
@@ -1015,7 +1018,7 @@
     gap: 20px;
   }
   .values-strip span {
-    font-size: 10px;
+    font-size: var(--text-small);
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -1034,10 +1037,10 @@
     font-size: 45px;
   }
   .about-copy > p {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .credentials {
-    font-size: 11px;
+    font-size: var(--text-ui);
     gap: 20px;
   }
   .section-heading {
@@ -1103,7 +1106,7 @@
     display: none;
   }
   .steps-grid h3 {
-    font-size: 18px;
+    font-size: 1.25rem;
   }
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1139,7 +1142,7 @@
     letter-spacing: -0.6px;
   }
   .hero-eyebrow {
-    font-size: 8px;
+    font-size: var(--text-small);
     letter-spacing: 1.3px;
   }
   .hero-photo {
@@ -1155,7 +1158,7 @@
     gap: 10px;
   }
   .care-badge > div {
-    font-size: 11px;
+    font-size: var(--text-ui);
   }
   .hero-spark {
     font-size: 42px;
@@ -1170,14 +1173,14 @@
     font-size: 26px;
   }
   .photo-caption > small {
-    font-size: 7px;
+    font-size: var(--text-small);
     letter-spacing: 1.4px;
   }
   .hero-actions {
     gap: 11px 20px;
   }
   .hero-assurance {
-    font-size: 8px;
+    font-size: var(--text-small);
     gap: 10px;
   }
   .hero-bottom > .container {
@@ -1194,7 +1197,7 @@
     gap: 17px 14px;
   }
   .values-strip span {
-    font-size: 9px;
+    font-size: var(--text-small);
     gap: 8px;
   }
   .values-strip app-icon {
@@ -1214,7 +1217,7 @@
     font-size: 39px;
   }
   .credentials {
-    font-size: 9px;
+    font-size: var(--text-small);
     gap: 14px;
   }
   .service-grid {
@@ -1226,7 +1229,7 @@
   }
   .service-card p {
     min-height: 0;
-    font-size: 13px;
+    font-size: var(--text-body);
     margin-bottom: 19px;
   }
   .service-top {
@@ -1249,13 +1252,13 @@
     font-size: 47px;
   }
   .check-list li {
-    font-size: 11px;
+    font-size: var(--text-ui);
   }
   .pilates-art {
     padding: 25px 20px 20px;
   }
   .pilates-art > .eyebrow {
-    font-size: 7px;
+    font-size: var(--text-small);
     letter-spacing: 1.1px;
   }
   .pilates-grid h2 {
@@ -1265,13 +1268,13 @@
     gap: 28px 20px;
   }
   .steps-grid h3 {
-    font-size: 17px;
+    font-size: 1.25rem;
   }
   .steps-grid p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
   .benefits-grid h3 {
-    font-size: 16px;
+    font-size: 1.25rem;
   }
   .testimonial-placeholder {
     min-width: 0;
@@ -1285,16 +1288,16 @@
     font-size: 40px;
   }
   .faq-list summary {
-    font-size: 12px;
+    font-size: var(--text-body);
     gap: 17px;
   }
   .final-cta h2 {
     font-size: 38px;
   }
   .final-credential {
-    font-size: 8px;
+    font-size: var(--text-small);
   }
   .final-cta p {
-    font-size: 12px;
+    font-size: var(--text-body);
   }
 }

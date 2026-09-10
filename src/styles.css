@@ -27,20 +27,23 @@
   --serif: "Cormorant Garamond", "Cormorant fallback", serif;
   --sans: "DM Sans", Arial, sans-serif;
   --radius: 12px;
+  --text-body: 1.125rem;
+  --text-ui: 1rem;
+  --text-small: 0.875rem;
 }
 * {
   box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 124px;
 }
 body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
   font-family: var(--sans);
-  font-size: 15px;
+  font-size: var(--text-body);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -126,13 +129,14 @@ p {
 .eyebrow {
   display: block;
   color: var(--gold);
-  font-size: 10px;
+  font-size: var(--text-small);
   font-weight: 600;
   letter-spacing: 2.3px;
   line-height: 1.6;
   margin-bottom: 22px;
 }
 .button {
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -143,7 +147,7 @@ p {
   border-radius: 5px;
   background: var(--blue);
   color: white;
-  font-size: 13px;
+  font-size: var(--text-ui);
   font-weight: 500;
   line-height: 1.4;
   transition:
@@ -192,7 +196,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-size: 13px;
+  font-size: var(--text-ui);
   font-weight: 500;
   min-height: 44px;
 }
@@ -217,7 +221,7 @@ main:focus {
   outline: none;
 }
 .site-header {
-  height: 92px;
+  height: 104px;
   background: #faf9f5f7;
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #3e596911;
@@ -236,9 +240,11 @@ main:focus {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-shrink: 0;
+  min-width: 0;
+  flex-shrink: 1;
 }
 .brand img {
+  flex-shrink: 0;
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -250,11 +256,17 @@ main:focus {
   letter-spacing: -0.3px;
 }
 .brand small {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8px;
   font-family: var(--sans);
-  font-size: 7px;
-  letter-spacing: 1.65px;
+  font-size: var(--text-small);
+  letter-spacing: 0.3px;
+  line-height: 1.5;
   margin-top: 7px;
+}
+.brand-registration {
+  white-space: nowrap;
 }
 .site-header nav {
   display: flex;
@@ -262,7 +274,7 @@ main:focus {
   align-items: center;
 }
 .site-header nav > a {
-  font-size: 12px;
+  font-size: var(--text-ui);
   position: relative;
   padding: 10px 0;
 }
@@ -281,7 +293,7 @@ main:focus {
 }
 .header-contact .button {
   min-height: 43px;
-  font-size: 11px;
+  font-size: var(--text-ui);
   padding: 12px 15px;
   gap: 7px;
 }
@@ -293,6 +305,7 @@ main:focus {
   height: 17px;
 }
 .menu-toggle {
+  flex-shrink: 0;
   display: none;
   align-items: center;
   justify-content: center;
@@ -324,7 +337,7 @@ main:focus {
 .footer-main nav {
   display: flex;
   gap: 26px;
-  font-size: 12px;
+  font-size: var(--text-ui);
 }
 .footer-main a:hover,
 .footer-bottom a:hover {
@@ -337,7 +350,12 @@ main:focus {
   gap: 20px;
   padding-block: 23px 30px;
   color: var(--muted);
-  font-size: 10px;
+  font-size: var(--text-small);
+}
+.footer-credit {
+  padding-bottom: 32px;
+  text-align: center;
+  font-size: var(--text-ui);
 }
 .floating-whatsapp {
   position: fixed;
@@ -364,7 +382,7 @@ main:focus {
   position: absolute;
   right: 62px;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: var(--text-ui);
   background: white;
   color: var(--blue);
   border-radius: 5px;
@@ -430,14 +448,16 @@ main:focus {
     display: none;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
   .site-header {
-    height: 78px;
+    height: 104px;
   }
   .site-header nav {
     display: none;
     position: absolute;
-    top: 77px;
+    top: 103px;
+    max-height: calc(100dvh - 104px);
+    overflow-y: auto;
     left: 0;
     right: 0;
     background: var(--cream);
@@ -452,7 +472,7 @@ main:focus {
     flex-direction: column;
   }
   .site-header nav > a {
-    font-size: 15px;
+    font-size: var(--text-ui);
     padding: 10px 0;
   }
   .mobile-contact {
@@ -476,7 +496,7 @@ main:focus {
     padding: 76px 0;
   }
   html {
-    scroll-padding-top: 90px;
+    scroll-padding-top: 124px;
   }
 }
 @media (max-width: 540px) {
@@ -484,7 +504,7 @@ main:focus {
     width: calc(100% - 40px);
   }
   body {
-    font-size: 14px;
+    font-size: var(--text-body);
   }
   .section {
     padding: 64px 0;
@@ -493,8 +513,8 @@ main:focus {
     font-size: 20px;
   }
   .brand small {
-    font-size: 6.5px;
-    letter-spacing: 1.2px;
+    font-size: var(--text-small);
+    letter-spacing: 0.1px;
   }
   .brand img {
     width: 42px;
@@ -504,7 +524,7 @@ main:focus {
     gap: 10px;
   }
   .eyebrow {
-    font-size: 9px;
+    font-size: var(--text-small);
     letter-spacing: 1.9px;
     margin-bottom: 18px;
   }
@@ -513,7 +533,7 @@ main:focus {
     letter-spacing: -1px;
   }
   .button {
-    font-size: 12px;
+    font-size: var(--text-ui);
     padding: 15px 18px;
   }
   .desktop-break {
@@ -533,12 +553,15 @@ main:focus {
   .footer-bottom {
     flex-direction: column;
     gap: 8px;
-    padding-bottom: 85px;
-    font-size: 10px;
+    padding-bottom: 24px;
+    font-size: var(--text-small);
   }
   .floating-whatsapp {
     right: 17px;
     bottom: 17px;
+  }
+  .footer-credit {
+    padding-bottom: 85px;
   }
   .privacy-page {
     padding-block: 40px 70px;
