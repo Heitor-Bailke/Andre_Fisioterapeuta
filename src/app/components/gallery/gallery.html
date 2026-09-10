@@ -1,0 +1,152 @@
+<section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+  <div class="container" appReveal>
+    <div class="gallery-heading">
+      <div>
+        <span class="eyebrow">O CUIDADO NA PRÁTICA</span>
+        <h2 id="gallery-title">
+          Pessoas, movimento<br /><em>e momentos de cuidado.</em>
+        </h2>
+      </div>
+      <p>
+        Conheça um pouco da rotina de atendimentos, dos exercícios e das
+        experiências que fazem parte do trabalho do André.
+      </p>
+    </div>
+    <div class="gallery-filters" role="group" aria-label="Filtrar galeria">
+      @for (option of filters; track option.value) {
+      <button
+        type="button"
+        [attr.aria-pressed]="filter() === option.value"
+        (click)="setFilter(option.value)"
+      >
+        {{ option.label }}
+      </button>
+      }
+    </div>
+    <div class="gallery-grid">
+      @for (item of visible(); track item.id) {
+      <button
+        type="button"
+        class="gallery-card"
+        (click)="open(item, $event)"
+        [attr.aria-label]="(item.type === 'video' ? 'Assistir: ' : 'Ampliar: ') + item.title"
+      >
+        <span class="gallery-image"
+          ><img
+            [src]="item.thumbnail"
+            [alt]="item.description"
+            loading="lazy"
+            width="600"
+            height="750"
+          />
+          <span class="media-kind"
+            >{{ item.type === 'video' ? 'Vídeo · ' + item.duration :
+            'Fotografia' }}</span
+          >
+          <span class="media-action" aria-hidden="true"
+            >{{ item.type === 'video' ? '▶' : '↗' }}</span
+          >
+        </span>
+        <span class="gallery-card-title"
+          >{{ item.title }}<app-icon name="arrow"
+        /></span>
+      </button>
+      }
+    </div>
+    @if (filtered().length > 6) {
+    <div class="gallery-more">
+      <button
+        type="button"
+        class="button"
+        [attr.aria-expanded]="expanded()"
+        (click)="expanded.set(!expanded())"
+      >
+        {{ expanded() ? 'Mostrar menos' : 'Ver mais registros' }}
+        <app-icon [name]="expanded() ? 'close' : 'plus'" />
+      </button>
+    </div>
+    }
+    <article class="care-feature">
+      <button
+        type="button"
+        class="feature-video"
+        (click)="open(featured, $event)"
+        aria-label="Assistir ao vídeo de cuidado individualizado"
+      >
+        <img
+          [src]="featured.thumbnail"
+          alt="Registro de um atendimento com acompanhamento próximo do fisioterapeuta"
+          width="478"
+          height="850"
+          loading="lazy"
+        />
+        <span class="feature-play"
+          ><span aria-hidden="true">▶</span> Assistir ao vídeo · {{
+          featured.duration }}</span
+        >
+      </button>
+      <div class="feature-copy">
+        <span class="eyebrow">CADA PESSOA, UM CUIDADO</span>
+        <h3>Cuidado individualizado,<br /><em>em cada etapa.</em></h3>
+        <p>
+          Estar perto, observar e respeitar o ritmo de cada pessoa. O
+          acompanhamento vai além do exercício: considera as necessidades de
+          quem recebe o cuidado.
+        </p>
+        <p>
+          Neste registro, André acompanha os movimentos durante o atendimento,
+          com atenção e apoio ao paciente.
+        </p>
+        <button
+          type="button"
+          class="button button-text"
+          (click)="open(featured, $event)"
+        >
+          Conheça esse atendimento <app-icon name="arrow" />
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<dialog
+  #viewer
+  class="gallery-viewer"
+  aria-labelledby="gallery-viewer-title"
+  aria-describedby="gallery-viewer-description"
+  (close)="onClosed()"
+  (click)="onBackdrop($event)"
+>
+  <div class="viewer-content">
+    <div class="viewer-heading">
+      <h2 id="gallery-viewer-title">{{ selected()?.title }}</h2>
+      <button
+        type="button"
+        class="viewer-close"
+        autofocus
+        aria-label="Fechar visualização"
+        (click)="close()"
+      >
+        <app-icon name="close" />
+      </button>
+    </div>
+    @if (selected(); as item) { @if (item.type === 'video') {
+    <video
+      controls
+      playsinline
+      preload="none"
+      [poster]="item.thumbnail"
+      [attr.aria-label]="item.title"
+      aria-describedby="gallery-viewer-description"
+    >
+      <source [src]="item.source" type="video/mp4" />
+      Seu navegador não suporta este vídeo.
+      <a [href]="item.source">Abrir o vídeo</a>.
+    </video>
+    } @else {
+    <img class="viewer-photo" [src]="item.source" [alt]="item.description" />
+    }
+    <p id="gallery-viewer-description">{{ item.description }}</p>
+    }
+  </div>
+</dialog>

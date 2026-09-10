@@ -28,7 +28,7 @@ export const appConfig: ApplicationConfig = {
         {
           path: "",
           component: HomeComponent,
-          title: "André Nunes Ladislau | Fisioterapia e Pilates Domiciliar",
+          title: "André Nunes Ladislau | Fisioterapia e Pilates",
         },
         {
           path: "privacidade",

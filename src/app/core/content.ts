@@ -21,16 +21,16 @@ export const services: Service[] = [
     subject: "pilates",
   },
   {
-    title: "Mobilidade e movimento",
+    title: "Ortopedia e reabilitação funcional",
     description:
-      "Atenção à sua mobilidade e capacidade funcional para os movimentos que fazem parte da sua vida.",
+      "Acompanhamento individualizado voltado à mobilidade e à recuperação dos movimentos para as atividades do dia a dia.",
     icon: "movement",
     subject: "physiotherapy",
   },
   {
-    title: "Acompanhamento individualizado",
+    title: "Fisioterapia esportiva",
     description:
-      "Um plano que respeita sua história, suas condições e seus objetivos. Porque cada pessoa é única.",
+      "Exercícios funcionais e movimentos da modalidade para trabalhar a recuperação de lesões e a preparação para o retorno ao esporte.",
     icon: "person",
     subject: "physiotherapy",
   },
@@ -66,11 +66,13 @@ export const steps = [
   },
   {
     title: "Combine o atendimento",
-    description: "Consulte a região atendida e defina o melhor dia e horário.",
+    description:
+      "Converse sobre o local do atendimento e defina o melhor dia e horário.",
   },
   {
-    title: "Receba o cuidado em casa",
-    description: "André vai até o endereço combinado para o seu atendimento.",
+    title: "Comece seu acompanhamento",
+    description:
+      "Receba atendimento na clínica ou em casa, conforme combinado com André.",
   },
 ];
 export const benefits: {
@@ -86,12 +88,14 @@ export const benefits: {
   {
     icon: "home",
     title: "O conforto da sua casa",
-    description: "Um ambiente familiar para receber seu acompanhamento.",
+    description:
+      "Na modalidade domiciliar, receba seu acompanhamento em um ambiente familiar.",
   },
   {
     icon: "clock",
     title: "Mais praticidade",
-    description: "Sem deslocamentos, com horários combinados para sua rotina.",
+    description:
+      "Combine o atendimento com sua rotina e consulte a opção de receber o cuidado em casa.",
   },
   {
     icon: "heart",
@@ -109,12 +113,12 @@ export const faqs = [
   {
     question: "O atendimento é domiciliar?",
     answer:
-      "Sim. André realiza atendimentos diretamente no endereço combinado com o paciente, com atenção às necessidades individuais e ao espaço disponível.",
+      "Sim. Além dos atendimentos em clínicas, André oferece fisioterapia domiciliar no endereço combinado com o paciente, com atenção às necessidades individuais e ao espaço disponível.",
   },
   {
     question: "Quem pode realizar o atendimento?",
     answer:
-      "O atendimento pode ser realizado em diferentes faixas etárias, incluindo crianças, adultos e idosos. Entre em contato para verificar a indicação de acordo com cada necessidade.",
+      "André atende crianças, adultos, idosos e atletas. Entre em contato para conversar sobre sua necessidade e verificar a indicação do acompanhamento.",
   },
   {
     question: "André trabalha com Pilates?",
@@ -129,7 +133,7 @@ export const faqs = [
   {
     question: "Onde os atendimentos são realizados?",
     answer:
-      "Os atendimentos são realizados em domicílio. Entre em contato pelo WhatsApp para consultar as regiões atendidas antes de agendar.",
+      "André realiza atendimentos em clínicas e em domicílio, além de ministrar aulas de Pilates. Entre em contato pelo WhatsApp para consultar os locais, as regiões atendidas e a disponibilidade.",
   },
 ];
 export interface Testimonial {

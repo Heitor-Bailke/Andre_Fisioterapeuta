@@ -5,9 +5,9 @@ export const siteConfig = {
   // Endereço do GitHub Pages; o workflow também detecta essa URL automaticamente.
   siteUrl: "https://heitor-bailke.github.io/Andre_Fisioterapeuta",
   // Acrescentar apenas informações profissionais confirmadas.
-  academicBackground: "",
+  academicBackground: "Pós-graduação em Ortopedia Esportiva",
   university: "",
-  courses: [] as string[],
+  courses: ["Pilates", "Fisioterapia no Futebol"] as string[],
   certifications: [] as string[],
   messages: {
     physiotherapy:

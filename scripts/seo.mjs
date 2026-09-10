@@ -33,7 +33,17 @@ const person = {
     value: siteConfig.registration,
   },
   telephone: `+${siteConfig.whatsappNumber}`,
-  knowsAbout: ["Fisioterapia", "Pilates"],
+  knowsAbout: [
+    "Fisioterapia",
+    "Ortopedia Esportiva",
+    "Fisioterapia esportiva",
+    "Reabilitação funcional",
+    ...siteConfig.courses,
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: siteConfig.academicBackground,
+  },
   ...(siteUrl
     ? { url: `${siteUrl}/`, image: `${siteUrl}/media/andre-hero.webp` }
     : {}),

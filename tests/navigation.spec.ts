@@ -9,6 +9,7 @@ test("âncoras preservam o espaço abaixo do cabeçalho", async ({
   const items = [
     ["Sobre", "sobre"],
     ["Serviços", "servicos"],
+    ["Galeria", "galeria"],
     ["Atendimento", "atendimento"],
     ["Pilates", "pilates"],
     ["FAQ", "faq"],

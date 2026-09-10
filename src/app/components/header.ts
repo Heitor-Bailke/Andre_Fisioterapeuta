@@ -58,6 +58,7 @@ export class HeaderComponent {
     { id: "inicio", label: "Início" },
     { id: "sobre", label: "Sobre" },
     { id: "servicos", label: "Serviços" },
+    { id: "galeria", label: "Galeria" },
     { id: "atendimento", label: "Atendimento" },
     { id: "pilates", label: "Pilates" },
     { id: "faq", label: "FAQ" },

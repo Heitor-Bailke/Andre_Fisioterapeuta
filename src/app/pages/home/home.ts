@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { ContactButtonComponent } from "../../shared/contact-button";
 import { IconComponent } from "../../shared/icon";
 import { RevealDirective } from "../../shared/reveal";
+import { GalleryComponent } from "../../components/gallery/gallery";
 import {
   audiences,
   benefits,
@@ -12,7 +13,12 @@ import {
 } from "../../core/content";
 @Component({
   selector: "app-home",
-  imports: [ContactButtonComponent, IconComponent, RevealDirective],
+  imports: [
+    ContactButtonComponent,
+    IconComponent,
+    RevealDirective,
+    GalleryComponent,
+  ],
   templateUrl: "./home.html",
   styleUrl: "./home.css",
 })
