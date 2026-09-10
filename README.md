@@ -1,84 +1,44 @@
-# André Nunes Ladislau — Fisioterapia e Pilates
+﻿<p align="center">
+  <img src="public/media/andre-logo.webp" alt="Marca de André Nunes Ladislau" width="88" />
+</p>
 
-Criei este site para ajudar meu amigo André Nunes Ladislau, fisioterapeuta, que estava precisando de uma página para apresentar seu trabalho e facilitar o contato com quem procura atendimento.
+<h1 align="center">Cuidado que vai até você</h1>
 
-A ideia foi transformar essa necessidade em um site acolhedor, profissional e fácil de usar, principalmente pelo celular. A página apresenta André, seus serviços de fisioterapia domiciliar e Pilates, e permite conversar diretamente com ele pelo WhatsApp.
+<p align="center">
+  Fisioterapia e Pilates · André Nunes Ladislau<br />
+  Um projeto feito para ajudar um amigo.
+</p>
 
-O projeto foi desenvolvido em Angular, TypeScript e CSS, com páginas pré-renderizadas em HTML estático e publicação no GitHub Pages. Sem backend, cadastro ou banco de dados.
+<p align="center">
+  <a href="https://heitor-bailke.github.io/Andre_Fisioterapeuta/"><strong>Visitar o site ↗</strong></a>
+</p>
 
-## Executar
+![Prévia da página inicial do site](docs/preview.png)
 
-Requer Node.js 24.15 ou superior compatível com Angular 22.
+## 💙 Por trás do projeto
 
-```sh
-npm ci
-npm start
-```
+Meu amigo André é fisioterapeuta e estava precisando de um site para apresentar seu trabalho e facilitar o contato com novos pacientes. Criei este projeto para ajudá-lo a ter esse espaço na internet, com a identidade dele e uma experiência simples para quem procura atendimento.
 
-Abra http://localhost:4200. Para gerar a versão de produção:
+A ideia foi levar para a página o cuidado e a proximidade que fazem parte da proposta do atendimento domiciliar.
 
-```sh
-npm run build
-```
+## ✨ Pensado para quem precisa de cuidado
 
-O site pronto para hospedagem fica em **dist/andre/browser**. A página inicial e `/privacidade/` são pré-renderizadas, inclusive para visitantes sem JavaScript.
+- **Conhecer o André:** apresentação profissional, fotos reais e sua identidade visual.
+- **Entender o atendimento:** informações sobre fisioterapia domiciliar, Pilates e cuidados em diferentes fases da vida.
+- **Tirar dúvidas:** respostas às principais perguntas sobre os serviços e o agendamento.
+- **Dar o primeiro passo:** contato direto pelo WhatsApp, sempre ao alcance.
 
-## Configuração e conteúdo
+## 🎨 A identidade do site
 
-- `src/app/core/site.config.ts`: nome, CREFITO, `whatsappNumber`, mensagens de contato, domínio e campos opcionais de formação. O WhatsApp informado foi configurado como `5527997854696`.
-- `src/app/core/content.ts`: serviços, faixas etárias, etapas, benefícios, FAQ e depoimentos tipados.
-- `src/app/pages/home/home.html`: textos de apresentação e seções principais.
-- `src/styles.css`: cores, tipografia, componentes compartilhados e regras de acessibilidade.
-- `src/app/pages/home/home.css`: composição e responsividade das seções.
-- `assets/`: arquivos originais fornecidos, preservados.
-- `public/media/`: versões otimizadas das fotos e marca. Para regerar: `npm run prepare:assets`.
+O azul e o dourado da marca se encontram com fundos claros, tipografia elegante e espaços que deixam a leitura mais leve. O layout se adapta ao celular e ao computador, com atenção à acessibilidade e ao carregamento das imagens.
 
-As fontes são locais. Os vídeos originais não são carregados pela página. A seção Pilates usa uma ilustração vetorial, pois não foi identificada uma foto específica de Pilates entre as imagens examinadas. Os depoimentos estão vazios, com um espaço reservado claramente identificado. Não há títulos, cidades, resultados ou avaliações inventados.
+## 🧩 Tecnologias
 
-## Domínio e publicação
+**Angular · TypeScript · HTML · CSS · GitHub Pages**
 
-**Hospedagem escolhida: GitHub Pages, sem domínio próprio.** O workflow em `.github/workflows/pages.yml` obtém automaticamente o endereço do site pelo GitHub e configura os caminhos das imagens, fontes e páginas. Também gera canonical, Open Graph com URLs absolutas, `robots.txt`, `sitemap.xml` e dados estruturados Schema.org. Não é necessário preencher `siteUrl` para essa publicação.
+---
 
-### Publicar no GitHub Pages
-
-Repositório: https://github.com/Heitor-Bailke/Andre_Fisioterapeuta
-
-Endereço previsto para o site: https://heitor-bailke.github.io/Andre_Fisioterapeuta/
-
-Sitemap: https://heitor-bailke.github.io/Andre_Fisioterapeuta/sitemap.xml
-
-1. Crie um repositório no GitHub e envie os arquivos deste projeto para a branch `main`, incluindo a pasta `.github`. A pasta `node_modules` e o build `dist` não precisam ser enviados.
-2. No repositório, abra **Settings → Pages → Build and deployment → Source** e selecione **GitHub Actions**.
-3. Na aba **Actions**, abra **Publicar no GitHub Pages** e clique em **Run workflow**. Os próximos envios à branch `main` publicarão as alterações automaticamente.
-4. Ao concluir, o endereço aparecerá em **Settings → Pages** e no resultado do deploy. Normalmente será `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`; esses nomes são exemplos para substituição, não dados configurados no site.
-
-O sitemap estará nesse endereço seguido de `sitemap.xml`. A página `/privacidade/` também é gerada como arquivo estático, permitindo acesso direto e atualização do navegador. Se a branch principal tiver outro nome, ajuste `branches` no workflow.
-
-Em sites de projeto publicados em uma subpasta, o `robots.txt` dessa subpasta não controla os rastreadores do domínio inteiro; o sitemap continua disponível pelo endereço completo.
-
-Referência: [configurar a publicação pelo GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-### Outras hospedagens
-
-Preencha `siteUrl` no arquivo de configuração ou a variável de ambiente `SITE_URL`, com HTTPS e sem barra final. Execute o build novamente. No build local sem endereço configurado, o sitemap mantém um comentário de configuração pendente.
-
-- **Vercel:** configuração incluída em `vercel.json`; cadastrar `SITE_URL`.
-- **Netlify:** configuração incluída em `netlify.toml`; cadastrar `SITE_URL`.
-- **Hostinger:** enviar o conteúdo de `dist/andre/browser` para a pasta pública do domínio.
-
-Não é necessário servidor Node em produção. Para novos caminhos, adicionar rotas ao Angular Router e verificar a pré-renderização no build.
-
-## Verificações
-
-```sh
-npm run build
-npm run test:e2e
-```
-
-Os testes usam Playwright com Chrome instalado, verificam desktop e celular, ausência de rolagem horizontal, menu, FAQ, links, imagens, dados de contato, navegação à privacidade e acessibilidade com axe. O servidor de arquivos de teste atende somente `dist/andre/browser`.
-
-Validação realizada: **6 testes aprovados**, em telas de 320 a 1920 px. Na medição local com Lighthouse mobile: **91 em performance e 100 em acessibilidade, boas práticas e SEO**. Essas pontuações são de laboratório; a hospedagem e a conexão influenciam os resultados publicados. O servidor de prévia usa compressão gzip e cache de arquivos estáticos, como uma hospedagem configurada para produção.
-
-Para abrir a versão compilada, execute `node scripts/serve.mjs` e acesse http://127.0.0.1:4173. Com essa prévia em execução, `node scripts/audit.mjs` gera relatórios Lighthouse em `.runtime/reports/`.
-
-Antes de publicar, revisar os conteúdos profissionais e a política de privacidade conforme o uso real do atendimento. O endereço do GitHub Pages será preenchido automaticamente durante a publicação.
+<p align="center">
+  Desenvolvido por <a href="https://github.com/Heitor-Bailke">Heitor Bailke</a><br />
+  Para ajudar um amigo a apresentar seu trabalho ao mundo.
+</p>
