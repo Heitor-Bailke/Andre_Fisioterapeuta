@@ -43,9 +43,10 @@
             >{{ item.type === 'video' ? 'Vídeo · ' + item.duration :
             'Fotografia' }}</span
           >
-          <span class="media-action" aria-hidden="true"
-            >{{ item.type === 'video' ? '▶' : '↗' }}</span
-          >
+          <span class="media-action" aria-hidden="true">
+            <app-icon [name]="item.type === 'video' ? 'play' : 'expand'" />
+            {{ item.type === 'video' ? 'Assistir' : 'Ampliar' }}
+          </span>
         </span>
         <span class="gallery-card-title"
           >{{ item.title }}<app-icon name="arrow"
@@ -81,7 +82,7 @@
           loading="lazy"
         />
         <span class="feature-play"
-          ><span aria-hidden="true">▶</span> Assistir ao vídeo · {{
+          ><app-icon name="play" /> Assistir ao vídeo · {{
           featured.duration }}</span
         >
       </button>

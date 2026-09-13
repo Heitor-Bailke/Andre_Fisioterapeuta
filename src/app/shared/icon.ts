@@ -1,6 +1,8 @@
 import { Component, input } from "@angular/core";
 export type IconName =
   | "arrow"
+  | "play"
+  | "expand"
   | "whatsapp"
   | "home"
   | "movement"
@@ -15,6 +17,8 @@ export type IconName =
   | "plus";
 const paths: Record<IconName, string> = {
   arrow: "M5 12h14m-5-5 5 5-5 5",
+  play: "m8 5 11 7-11 7Z",
+  expand: "M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7",
   whatsapp:
     "M20.5 11.7a8.5 8.5 0 0 1-12.7 7.4L3 20.5l1.4-4.6a8.5 8.5 0 1 1 16.1-4.2ZM8 7.5c-.7 0-1 1-.7 2.2.6 2.5 3.6 5.4 6.4 6 .9.2 2.1-.7 2.1-1.4l-2.7-1.4-1 1c-1.4-.7-2.3-1.6-2.9-2.8l.9-1-1.3-2.6Z",
   home: "m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7",
