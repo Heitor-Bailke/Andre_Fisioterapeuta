@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "André Nunes Ladislau",
   registration: "421269-F",
   whatsappNumber: "5527997854696",
-  // Endereço do GitHub Pages; o workflow também detecta essa URL automaticamente.
-  siteUrl: "https://heitor-bailke.github.io/Andre_Fisioterapeuta",
+  // Domínio principal usado nos links canônicos e no sitemap.
+  siteUrl: "https://drandrenunesfisio.com.br",
   // Acrescentar apenas informações profissionais confirmadas.
   academicBackground: "Pós-graduação em Ortopedia Esportiva",
   university: "",

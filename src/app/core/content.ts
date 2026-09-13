@@ -9,28 +9,28 @@ export const services: Service[] = [
   {
     title: "Fisioterapia domiciliar",
     description:
-      "O cuidado que você precisa, no conforto da sua casa. Atendimento de acordo com suas necessidades.",
+      "Levo a fisioterapia até você, com sessões planejadas para o espaço e os recursos disponíveis na sua casa.",
     icon: "home",
     subject: "physiotherapy",
   },
   {
     title: "Pilates",
     description:
-      "Movimento com propósito. Exercícios orientados para mobilidade, fortalecimento e controle corporal.",
+      "Oriento exercícios para desenvolver força, flexibilidade e consciência corporal.",
     icon: "spark",
     subject: "pilates",
   },
   {
     title: "Ortopedia e reabilitação funcional",
     description:
-      "Acompanhamento individualizado voltado à mobilidade e à recuperação dos movimentos para as atividades do dia a dia.",
+      "Ajudo você a recuperar a mobilidade e a retomar as atividades do dia a dia.",
     icon: "movement",
     subject: "physiotherapy",
   },
   {
     title: "Fisioterapia esportiva",
     description:
-      "Exercícios funcionais e movimentos da modalidade para trabalhar a recuperação de lesões e a preparação para o retorno ao esporte.",
+      "Trabalho a recuperação de lesões e a preparação para o retorno ao esporte com exercícios da sua modalidade.",
     icon: "person",
     subject: "physiotherapy",
   },
@@ -40,25 +40,25 @@ export const audiences = [
     number: "01",
     title: "Crianças",
     description:
-      "Cuidado individualizado, respeitando as necessidades de cada fase do desenvolvimento.",
+      "Adapto as sessões às necessidades de cada etapa do desenvolvimento.",
   },
   {
     number: "02",
     title: "Adultos",
     description:
-      "Atenção à mobilidade, ao movimento e à qualidade de vida em meio à rotina.",
+      "Trabalho as dificuldades que afetam sua rotina, do trabalho à atividade física.",
   },
   {
     number: "03",
     title: "Idosos",
     description:
-      "Um olhar cuidadoso para a segurança, o equilíbrio, a mobilidade e a independência.",
+      "Busco favorecer o equilíbrio, a segurança e a independência nas tarefas diárias.",
   },
 ];
 export const steps = [
   {
     title: "Entre em contato",
-    description: "Clique no botão de WhatsApp e fale diretamente com André.",
+    description: "Me envie uma mensagem pelo WhatsApp.",
   },
   {
     title: "Conte sua necessidade",
@@ -66,13 +66,12 @@ export const steps = [
   },
   {
     title: "Combine o atendimento",
-    description:
-      "Converse sobre o local do atendimento e defina o melhor dia e horário.",
+    description: "Vamos definir juntos o local, o dia e o horário.",
   },
   {
     title: "Comece seu acompanhamento",
     description:
-      "Receba atendimento na clínica ou em casa, conforme combinado com André.",
+      "Na primeira sessão, avalio suas necessidades para planejar os próximos passos.",
   },
 ];
 export const benefits: {
@@ -82,58 +81,59 @@ export const benefits: {
 }[] = [
   {
     icon: "person",
-    title: "Você no centro do cuidado",
-    description: "Atendimento individualizado, pensado para suas necessidades.",
+    title: "Escuta desde o início",
+    description:
+      "Quero entender suas dificuldades e o que você deseja alcançar.",
   },
   {
     icon: "home",
     title: "O conforto da sua casa",
     description:
-      "Na modalidade domiciliar, receba seu acompanhamento em um ambiente familiar.",
+      "Adapto a sessão ao seu ambiente para facilitar a continuidade em casa.",
   },
   {
     icon: "clock",
     title: "Mais praticidade",
     description:
-      "Combine o atendimento com sua rotina e consulte a opção de receber o cuidado em casa.",
+      "Combino com você horários que se encaixem na sua rotina, conforme a disponibilidade.",
   },
   {
     icon: "heart",
     title: "Acompanhamento próximo",
     description:
-      "Contato direto com quem cuida de você, do início ao acompanhamento.",
+      "Acompanho sua evolução e ajusto o plano ao longo das sessões.",
   },
 ];
 export const faqs = [
   {
     question: "Como faço para agendar?",
     answer:
-      "Basta clicar em um dos botões de WhatsApp disponíveis no site e falar diretamente com André. Vocês poderão conversar sobre sua necessidade, a região de atendimento e os horários disponíveis.",
+      "Clique em um dos botões de WhatsApp e me conte o que você precisa. Vamos conversar sobre o local e os horários disponíveis.",
   },
   {
     question: "O atendimento é domiciliar?",
     answer:
-      "Sim. Além dos atendimentos em clínicas, André oferece fisioterapia domiciliar no endereço combinado com o paciente, com atenção às necessidades individuais e ao espaço disponível.",
+      "Sim. Além de atuar em clínicas, vou até o endereço combinado com você. Planejo a sessão considerando suas necessidades e o espaço disponível.",
   },
   {
-    question: "Quem pode realizar o atendimento?",
+    question: "Quem você atende?",
     answer:
-      "André atende crianças, adultos, idosos e atletas. Entre em contato para conversar sobre sua necessidade e verificar a indicação do acompanhamento.",
+      "Atendo crianças, adultos, idosos e atletas. Podemos conversar para avaliar se minha atuação é adequada ao que você precisa.",
   },
   {
-    question: "André trabalha com Pilates?",
+    question: "Você trabalha com Pilates?",
     answer:
-      "Sim. André possui formação em Pilates e trabalha movimento, consciência corporal, mobilidade e fortalecimento de forma individualizada. Converse com ele para conhecer o atendimento.",
+      "Sim. Tenho formação em Pilates e ministro aulas com exercícios adaptados aos objetivos e às possibilidades de cada aluno.",
   },
   {
     question: "Como saber os horários disponíveis?",
     answer:
-      "Os horários são combinados diretamente pelo WhatsApp. Entre em contato para consultar a disponibilidade e encontrar um horário adequado à sua rotina.",
+      "Me chame pelo WhatsApp para consultar minha agenda e combinarmos um horário.",
   },
   {
     question: "Onde os atendimentos são realizados?",
     answer:
-      "André realiza atendimentos em clínicas e em domicílio, além de ministrar aulas de Pilates. Entre em contato pelo WhatsApp para consultar os locais, as regiões atendidas e a disponibilidade.",
+      "Atuo em clínicas e em domicílio, além de ministrar aulas de Pilates. Pelo WhatsApp, informo os endereços e confirmo se atendo na sua região.",
   },
 ];
 export interface Testimonial {

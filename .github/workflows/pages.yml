@@ -33,7 +33,6 @@ jobs:
         run: npm ci
       - name: Gerar páginas, imagens e sitemap
         env:
-          SITE_URL: ${{ steps.pages.outputs.base_url }}
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
           npx ng build --base-href "${PAGES_BASE_PATH}/"

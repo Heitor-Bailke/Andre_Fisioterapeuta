@@ -8,8 +8,8 @@ import { ContactButtonComponent } from "../shared/contact-button";
     ><span class="eyebrow">SEUS DADOS</span>
     <h1>Política de Privacidade</h1>
     <p>
-      Este site apresenta o trabalho de André Nunes Ladislau, fisioterapeuta,
-      CREFITO 421269-F.
+      Sou André Nunes Ladislau e este site apresenta meu trabalho como
+      fisioterapeuta, CREFITO 421269-F.
     </p>
     <h2>Durante a navegação</h2>
     <p>
@@ -22,17 +22,17 @@ import { ContactButtonComponent } from "../shared/contact-button";
     <p>
       Os botões de agendamento abrem o WhatsApp, um serviço externo. A mensagem
       sugerida pode ser editada antes do envio. As informações que você decidir
-      compartilhar na conversa serão recebidas por André para responder ao
-      contato e organizar o atendimento. O uso do WhatsApp também está sujeito
-      às políticas desse serviço.
+      compartilhar na conversa serão recebidas por mim para responder ao contato
+      e organizar o atendimento. O uso do WhatsApp também está sujeito às
+      políticas desse serviço.
     </p>
     <h2>Dúvidas sobre seus dados</h2>
     <p>
       Para esclarecer como as informações compartilhadas no contato são
-      utilizadas ou solicitar sua atualização ou exclusão, fale diretamente com
-      André pelo WhatsApp.
+      utilizadas ou solicitar sua atualização ou exclusão, fale comigo pelo
+      WhatsApp.
     </p>
-    <app-contact-button label="Falar com André" />
+    <app-contact-button label="Converse comigo" />
   </article>`,
 })
 export class PrivacyComponent {}

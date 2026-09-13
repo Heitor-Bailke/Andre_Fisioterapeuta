@@ -925,6 +925,21 @@
   }
 }
 @media (max-width: 760px) {
+  .hero-spark,
+  .hero-assurance app-icon,
+  .values-strip app-icon,
+  .credentials app-icon,
+  .service-top .icon-box,
+  .check-list app-icon,
+  .arch-art > app-icon,
+  .home-care-seal app-icon,
+  .benefits-grid app-icon {
+    display: none;
+  }
+  .service-top {
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     gap: 45px;

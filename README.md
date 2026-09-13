@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://heitor-bailke.github.io/Andre_Fisioterapeuta/"><strong>Visitar o site ↗</strong></a>
+  <a href="https://drandrenunesfisio.com.br/"><strong>Visitar o site ↗</strong></a>
 </p>
 
 ![Prévia da página inicial do site](docs/preview.png)
@@ -35,6 +35,31 @@ O azul e o dourado da marca se encontram com fundos claros, tipografia elegante 
 ## 🧩 Tecnologias
 
 **Angular · TypeScript · HTML · CSS · GitHub Pages**
+
+## Domínio e publicação
+
+Domínio principal: `drandrenunesfisio.com.br`. O build gera os links canônicos,
+os metadados de compartilhamento e o sitemap com esse endereço.
+
+Em **Settings → Pages → Custom domain** do repositório, salvar
+`drandrenunesfisio.com.br`. No provedor de DNS, configurar:
+
+| Tipo | Nome | Destino |
+| --- | --- | --- |
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+| CNAME | www | heitor-bailke.github.io |
+
+Quando o certificado estiver disponível, ativar **Enforce HTTPS** no Pages.
+Após salvar o domínio, executar **Actions → Publicar no GitHub Pages → Run workflow**
+para gerar novamente o site com o caminho base detectado pelo GitHub.
+Enquanto o domínio não estiver salvo no Pages, o workflow mantém o caminho
+`/Andre_Fisioterapeuta/` para o endereço original continuar funcionando.
+
+A publicação usa GitHub Actions, portanto não depende de um arquivo `CNAME`.
+Veja a [documentação do GitHub sobre domínios personalizados](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ---
 

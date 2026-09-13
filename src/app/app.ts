@@ -17,8 +17,8 @@ import { whatsappUrl } from "./core/site.config";
       [href]="contactUrl"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Falar com André pelo WhatsApp (abre em nova aba)"
-      ><app-icon name="whatsapp" /><span>Fale com André</span></a
+      aria-label="Converse comigo pelo WhatsApp (abre em nova aba)"
+      ><app-icon name="whatsapp" /><span>Converse comigo</span></a
     >`,
 })
 export class AppComponent {
