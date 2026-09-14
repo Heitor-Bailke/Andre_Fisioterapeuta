@@ -131,9 +131,9 @@ export const faqs = [
       "Me chame pelo WhatsApp para consultar minha agenda e combinarmos um horário.",
   },
   {
-    question: "Onde os atendimentos são realizados?",
+    question: "Você atende em quais regiões?",
     answer:
-      "Atuo em clínicas e em domicílio, além de ministrar aulas de Pilates. Pelo WhatsApp, informo os endereços e confirmo se atendo na sua região.",
+      "Atendo em Colatina e região, em clínicas e em domicílio, além de ministrar aulas de Pilates. Entre em contato pelo WhatsApp para confirmar a disponibilidade no seu bairro ou município e consultar os locais de atendimento.",
   },
 ];
 export interface Testimonial {
